@@ -1,9 +1,0 @@
-Introducing NUTROWEB :
-- NUTRO WEB is a comprehensive platform dedicated to providing valuable insights and resources on nutrition and balanced diets.
-- The website covers a wide range of topics aimed at promoting a healthy lifestyle for individuals across various age groups and health conditions.
-
-Team members :
-Team Lead ~ Madanapu chandu
-Front-end ~ Manish kumar & Ruchilasya
-Back-end ~ Madanapu chandu & Sai kiran
-AI ~ Chittanuri harish & Rishith konderi
