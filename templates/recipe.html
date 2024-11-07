@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Recipe Collection</title>
+
+    <!-- CSS for styling -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .recipe-card {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .recipe-card h2 {
+            color: #333;
+        }
+
+        .recipe-card button {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .recipe-card button:hover {
+            background-color: #555;
+        }
+
+        .recipe-details {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .recipe-details h3 {
+            color: #444;
+        }
+
+        .recipe-details ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .recipe-details ul li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Welcome to My Recipe Collection</h1>
+        <nav>
+            <ul>
+                <li><a href="#recipe1">Recipe 1</a></li>
+                <li><a href="#recipe2">Recipe 2</a></li>
+                <li><a href="#recipe3">Recipe 3</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Featured Recipes</h2>
+
+        <!-- Recipe 1 -->
+        <div class="recipe-card" id="recipe1">
+            <h2>Chocolate Cake</h2>
+            <button onclick="toggleDetails('details1')">Show Recipe</button>
+            <div class="recipe-details" id="details1">
+                <h3>Ingredients:</h3>
+                <ul>
+                    <li>1 cup flour</li>
+                    <li>1 cup sugar</li>
+                    <li>2 eggs</li>
+                    <li>1/2 cup cocoa powder</li>
+                    <li>1/2 cup milk</li>
+                    <li>1/2 cup vegetable oil</li>
+                </ul>
+
+                <h3>Instructions:</h3>
+                <p>Mix all ingredients together and bake at 350°F for 25 minutes.</p>
+            </div>
+        </div>
+
+        <!-- Recipe 2 -->
+        <div class="recipe-card" id="recipe2">
+            <h2>Pasta Primavera</h2>
+            <button onclick="toggleDetails('details2')">Show Recipe</button>
+            <div class="recipe-details" id="details2">
+                <h3>Ingredients:</h3>
+                <ul>
+                    <li>1 package of pasta</li>
+                    <li>1 cup mixed vegetables (peppers, broccoli, etc.)</li>
+                    <li>1/4 cup olive oil</li>
+                    <li>1 clove garlic</li>
+                    <li>Salt and pepper to taste</li>
+                </ul>
+
+                <h3>Instructions:</h3>
+                <p>Cook pasta, sauté vegetables with garlic and olive oil, and combine with pasta. Season with salt and pepper.</p>
+            </div>
+        </div>
+
+        <!-- Recipe 3 -->
+        <div class="recipe-card" id="recipe3">
+            <h2>Apple Pie</h2>
+            <button onclick="toggleDetails('details3')">Show Recipe</button>
+            <div class="recipe-details" id="details3">
+                <h3>Ingredients:</h3>
+                <ul>
+                    <li>4 cups apples (sliced)</li>
+                    <li>1 cup sugar</li>
+                    <li>1 tsp cinnamon</li>
+                    <li>1/4 tsp nutmeg</li>
+                    <li>1 package pie crust</li>
+                </ul>
+
+                <h3>Instructions:</h3>
+                <p>Place apples in the pie crust, mix sugar, cinnamon, and nutmeg, and bake at 375°F for 45 minutes.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Recipe Collection</p>
+    </footer>
+
+    <!-- JavaScript for functionality -->
+    <script>
+        // Function to toggle recipe details visibility
+        function toggleDetails(id) {
+            var details = document.getElementById(id);
+            if (details.style.display === "block") {
+                details.style.display = "none";
+            } else {
+                details.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
