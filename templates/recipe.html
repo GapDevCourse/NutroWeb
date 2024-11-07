@@ -1,212 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Healthy Recipes for Special Dietary Needs</title>
-
-    <!-- CSS for styling -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Healthy Recipes for Common Health Problems</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            background-color: #f4f4f4;
         }
 
         header {
-            background-color: #4CAF50;
+            background-color: #2d87f0;
             color: white;
-            padding: 20px;
             text-align: center;
+            padding: 20px 0;
         }
 
         header h1 {
             margin: 0;
-            font-size: 2em;
-        }
-
-        nav {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 15px;
-        }
-
-        nav ul li a {
-            color: #4CAF50;
-            text-decoration: none;
-            font-size: 18px;
+            font-size: 36px;
         }
 
         .container {
-            padding: 20px;
+            width: 90%;
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
         }
 
         .recipe-card {
             background-color: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 280px;
+            margin: 15px;
+            padding: 15px;
+            transition: transform 0.3s;
         }
 
-        .recipe-card h2 {
+        .recipe-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .recipe-card h3 {
+            color: #2d87f0;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .recipe-card p {
             color: #333;
+            font-size: 16px;
+            line-height: 1.6;
         }
 
-        .recipe-card button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .recipe-card button:hover {
-            background-color: #45a049;
-        }
-
-        .recipe-details {
-            display: none;
-            margin-top: 20px;
-        }
-
-        .recipe-details h3 {
-            color: #444;
-        }
-
-        .recipe-details ul {
+        .recipe-card ul {
             list-style-type: none;
             padding: 0;
         }
 
-        .recipe-details ul li {
-            margin: 5px 0;
+        .recipe-card ul li {
+            margin: 8px 0;
         }
 
         footer {
-            background-color: #333;
+            background-color: #2d87f0;
             color: white;
             text-align: center;
-            padding: 10px;
+            padding: 10px 0;
             position: fixed;
             width: 100%;
             bottom: 0;
         }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
     </style>
 </head>
-
 <body>
 
     <header>
-        <h1>Healthy Recipes for Special Dietary Needs</h1>
-        <p>Delicious and nutritious recipes for people with specific health conditions.</p>
+        <h1>Healthy Recipes for Common Health Problems</h1>
+        <p>Your guide to nourishing foods for better health</p>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#diabetes">Diabetes-Friendly</a></li>
-            <li><a href="#heart-health">Heart-Healthy</a></li>
-            <li><a href="#gluten-free">Gluten-Free</a></li>
-        </ul>
-    </nav>
-
     <div class="container">
-        <h2 id="diabetes">Diabetes-Friendly Recipes</h2>
 
-        <!-- Recipe 1: Diabetes-Friendly -->
-        <div class="recipe-card" id="recipe1">
-            <h2>Low-Carb Grilled Chicken Salad</h2>
-            <button onclick="toggleDetails('details1')">Show Recipe</button>
-            <div class="recipe-details" id="details1">
-                <h3>Ingredients:</h3>
-                <ul>
-                    <li>1 chicken breast</li>
-                    <li>1 cup mixed greens</li>
-                    <li>1/4 cup cherry tomatoes</li>
-                    <li>1/4 cup cucumber slices</li>
-                    <li>2 tbsp olive oil</li>
-                    <li>1 tbsp balsamic vinegar</li>
-                </ul>
-
-                <h3>Instructions:</h3>
-                <p>Grill the chicken breast and slice it. Toss it with mixed greens, tomatoes, cucumber, olive oil, and balsamic vinegar.</p>
-                <p><strong>Health Tip:</strong> This recipe is low in carbs and packed with protein, making it perfect for managing blood sugar levels.</p>
-            </div>
+        <!-- Heart Health -->
+        <div class="recipe-card">
+            <h3>Heart Health</h3>
+            <p>Maintaining heart health is essential for overall well-being. These recipes can help keep your heart strong.</p>
+            <h4>Recipe: Avocado & Tomato Salad</h4>
+            <ul>
+                <li>1 ripe avocado</li>
+                <li>2 tomatoes, diced</li>
+                <li>1 tbsp olive oil</li>
+                <li>1 tbsp lemon juice</li>
+                <li>Salt & pepper to taste</li>
+            </ul>
+            <p>Combine all ingredients in a bowl and mix gently. Serve fresh!</p>
         </div>
 
-        <h2 id="heart-health">Heart-Healthy Recipes</h2>
-
-        <!-- Recipe 2: Heart-Healthy -->
-        <div class="recipe-card" id="recipe2">
-            <h2>Oatmeal with Berries and Almonds</h2>
-            <button onclick="toggleDetails('details2')">Show Recipe</button>
-            <div class="recipe-details" id="details2">
-                <h3>Ingredients:</h3>
-                <ul>
-                    <li>1/2 cup rolled oats</li>
-                    <li>1 cup almond milk (unsweetened)</li>
-                    <li>1/2 cup mixed berries (blueberries, strawberries)</li>
-                    <li>2 tbsp sliced almonds</li>
-                </ul>
-
-                <h3>Instructions:</h3>
-                <p>Cook oats with almond milk. Top with mixed berries and sliced almonds.</p>
-                <p><strong>Health Tip:</strong> This oatmeal is high in fiber and antioxidants, which are great for heart health.</p>
-            </div>
+        <!-- Diabetes -->
+        <div class="recipe-card">
+            <h3>Diabetes</h3>
+            <p>Healthy meals that help regulate blood sugar levels.</p>
+            <h4>Recipe: Quinoa & Veggie Stir-fry</h4>
+            <ul>
+                <li>1 cup cooked quinoa</li>
+                <li>1 cup mixed vegetables (carrots, bell peppers, broccoli)</li>
+                <li>2 tbsp olive oil</li>
+                <li>1 tbsp soy sauce (low sodium)</li>
+                <li>1 garlic clove, minced</li>
+            </ul>
+            <p>Stir-fry vegetables in olive oil and garlic, then mix in quinoa and soy sauce. Serve hot.</p>
         </div>
 
-        <h2 id="gluten-free">Gluten-Free Recipes</h2>
+        <!-- Digestive Health -->
+        <div class="recipe-card">
+            <h3>Digestive Health</h3>
+            <p>Support a healthy gut with fiber-rich foods.</p>
+            <h4>Recipe: Apple Cinnamon Oatmeal</h4>
+            <ul>
+                <li>1/2 cup rolled oats</li>
+                <li>1 apple, diced</li>
+                <li>1 tsp cinnamon</li>
+                <li>1 tbsp honey (optional)</li>
+                <li>1 cup almond milk</li>
+            </ul>
+            <p>Cook oats with almond milk, then top with apples, cinnamon, and honey.</p>
+        </div>
 
-        <!-- Recipe 3: Gluten-Free -->
-        <div class="recipe-card" id="recipe3">
-            <h2>Quinoa and Roasted Vegetable Bowl</h2>
-            <button onclick="toggleDetails('details3')">Show Recipe</button>
-            <div class="recipe-details" id="details3">
-                <h3>Ingredients:</h3>
-                <ul>
-                    <li>1 cup quinoa</li>
-                    <li>1 cup mixed vegetables (zucchini, bell peppers, carrots)</li>
-                    <li>1 tbsp olive oil</li>
-                    <li>1/2 tsp turmeric</li>
-                </ul>
+        <!-- Joint Health -->
+        <div class="recipe-card">
+            <h3>Joint Health</h3>
+            <p>Foods rich in Omega-3 and antioxidants help reduce inflammation.</p>
+            <h4>Recipe: Salmon with Spinach</h4>
+            <ul>
+                <li>1 salmon fillet</li>
+                <li>2 cups spinach</li>
+                <li>1 tbsp olive oil</li>
+                <li>1 lemon, sliced</li>
+                <li>Salt & pepper to taste</li>
+            </ul>
+            <p>Pan-sear salmon in olive oil, then serve on a bed of sautéed spinach with lemon slices.</p>
+        </div>
 
-                <h3>Instructions:</h3>
-                <p>Cook quinoa according to package instructions. Roast vegetables with olive oil and turmeric. Combine cooked quinoa and roasted vegetables.</p>
-                <p><strong>Health Tip:</strong> Quinoa is a great gluten-free grain that is rich in protein and fiber, making it a perfect base for a healthy meal.</p>
-            </div>
+        <!-- Weight Loss -->
+        <div class="recipe-card">
+            <h3>Weight Loss</h3>
+            <p>These low-calorie meals help manage weight without sacrificing flavor.</p>
+            <h4>Recipe: Zucchini Noodles with Pesto</h4>
+            <ul>
+                <li>2 zucchinis, spiralized</li>
+                <li>1/4 cup pesto sauce</li>
+                <li>1 tbsp olive oil</li>
+                <li>1 tbsp parmesan (optional)</li>
+            </ul>
+            <p>Sauté zucchini noodles in olive oil, then toss with pesto and top with parmesan.</p>
+        </div>
+
+        <!-- High Blood Pressure -->
+        <div class="recipe-card">
+            <h3>High Blood Pressure</h3>
+            <p>Eat foods that help reduce sodium and increase potassium to support heart health.</p>
+            <h4>Recipe: Sweet Potato & Black Bean Salad</h4>
+            <ul>
+                <li>2 medium sweet potatoes, diced</li>
+                <li>1 cup black beans, cooked</li>
+                <li>1/4 cup red onion, diced</li>
+                <li>1/4 cup cilantro, chopped</li>
+                <li>1 tbsp olive oil</li>
+                <li>1 tbsp lime juice</li>
+            </ul>
+            <p>Roast sweet potatoes, then mix with black beans, onion, and cilantro. Drizzle with olive oil and lime juice.</p>
+        </div>
+
+        <!-- Anemia -->
+        <div class="recipe-card">
+            <h3>Anemia</h3>
+            <p>Boost your iron levels with nutrient-rich meals.</p>
+            <h4>Recipe: Spinach and Lentil Soup</h4>
+            <ul>
+                <li>1 cup lentils, rinsed</li>
+                <li>2 cups spinach</li>
+                <li>1 onion, chopped</li>
+                <li>1 garlic clove, minced</li>
+                <li>4 cups vegetable broth</li>
+            </ul>
+            <p>Simmer lentils, spinach, onion, garlic, and broth until lentils are tender. Season to taste.</p>
+        </div>
+
+        <!-- Skin Health -->
+        <div class="recipe-card">
+            <h3>Skin Health</h3>
+            <p>Keep your skin glowing with antioxidant-rich foods.</p>
+            <h4>Recipe: Blueberry Chia Smoothie</h4>
+            <ul>
+                <li>1/2 cup frozen blueberries</li>
+                <li>1 tbsp chia seeds</li>
+                <li>1/2 cup almond milk</li>
+                <li>1/2 banana</li>
+            </ul>
+            <p>Blend all ingredients together for a nutrient-packed smoothie.</p>
+        </div>
+
+        <!-- Cholesterol Management -->
+        <div class="recipe-card">
+            <h3>Cholesterol Management</h3>
+            <p>Foods that help lower LDL cholesterol and promote heart health.</p>
+            <h4>Recipe: Oats & Flaxseed Porridge</h4>
+            <ul>
+                <li>1/2 cup rolled oats</li>
+                <li>1 tbsp ground flaxseeds</li>
+                <li>1 tbsp honey</li>
+                <li>1/2 cup almond milk</li>
+            </ul>
+            <p>Cook oats in almond milk, then stir in ground flaxseeds and honey. Serve warm.</p>
         </div>
 
     </div>
 
     <footer>
-        <p>&copy; 2024 Healthy Recipes for Special Dietary Needs</p>
+        <p>&copy; 2024 Healthy Recipes. All Rights Reserved.</p>
     </footer>
 
-    <!-- JavaScript for functionality -->
-    <script>
-        // Function to toggle recipe details visibility
-        function toggleDetails(id) {
-            var details = document.getElementById(id);
-            if (details.style.display === "block") {
-                details.style.display = "none";
-            } else {
-                details.style.display = "block";
-            }
-        }
-    </script>
-
 </body>
-
 </html>
