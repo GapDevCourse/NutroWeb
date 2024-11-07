@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Recipe Collection</title>
+    <title>Healthy Recipes for Special Dietary Needs</title>
 
     <!-- CSS for styling -->
     <style>
@@ -12,40 +12,43 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
         }
 
         header {
-            background-color: #333;
+            background-color: #4CAF50;
             color: white;
             padding: 20px;
             text-align: center;
         }
 
-        header nav ul {
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        nav ul {
             list-style-type: none;
             padding: 0;
         }
 
-        header nav ul li {
+        nav ul li {
             display: inline;
             margin-right: 15px;
         }
 
-        header nav ul li a {
-            color: white;
+        nav ul li a {
+            color: #4CAF50;
             text-decoration: none;
             font-size: 18px;
         }
 
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-        }
-
-        section {
+        .container {
             padding: 20px;
         }
 
@@ -62,7 +65,7 @@
         }
 
         .recipe-card button {
-            background-color: #333;
+            background-color: #4CAF50;
             color: white;
             padding: 10px;
             border: none;
@@ -71,7 +74,7 @@
         }
 
         .recipe-card button:hover {
-            background-color: #555;
+            background-color: #45a049;
         }
 
         .recipe-details {
@@ -91,86 +94,104 @@
         .recipe-details ul li {
             margin: 5px 0;
         }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
     </style>
 </head>
 
 <body>
 
     <header>
-        <h1>Welcome to My Recipe Collection</h1>
-        <nav>
-            <ul>
-                <li><a href="#recipe1">Recipe 1</a></li>
-                <li><a href="#recipe2">Recipe 2</a></li>
-                <li><a href="#recipe3">Recipe 3</a></li>
-            </ul>
-        </nav>
+        <h1>Healthy Recipes for Special Dietary Needs</h1>
+        <p>Delicious and nutritious recipes for people with specific health conditions.</p>
     </header>
 
-    <section>
-        <h2>Featured Recipes</h2>
+    <nav>
+        <ul>
+            <li><a href="#diabetes">Diabetes-Friendly</a></li>
+            <li><a href="#heart-health">Heart-Healthy</a></li>
+            <li><a href="#gluten-free">Gluten-Free</a></li>
+        </ul>
+    </nav>
 
-        <!-- Recipe 1 -->
+    <div class="container">
+        <h2 id="diabetes">Diabetes-Friendly Recipes</h2>
+
+        <!-- Recipe 1: Diabetes-Friendly -->
         <div class="recipe-card" id="recipe1">
-            <h2>Chocolate Cake</h2>
+            <h2>Low-Carb Grilled Chicken Salad</h2>
             <button onclick="toggleDetails('details1')">Show Recipe</button>
             <div class="recipe-details" id="details1">
                 <h3>Ingredients:</h3>
                 <ul>
-                    <li>1 cup flour</li>
-                    <li>1 cup sugar</li>
-                    <li>2 eggs</li>
-                    <li>1/2 cup cocoa powder</li>
-                    <li>1/2 cup milk</li>
-                    <li>1/2 cup vegetable oil</li>
+                    <li>1 chicken breast</li>
+                    <li>1 cup mixed greens</li>
+                    <li>1/4 cup cherry tomatoes</li>
+                    <li>1/4 cup cucumber slices</li>
+                    <li>2 tbsp olive oil</li>
+                    <li>1 tbsp balsamic vinegar</li>
                 </ul>
 
                 <h3>Instructions:</h3>
-                <p>Mix all ingredients together and bake at 350°F for 25 minutes.</p>
+                <p>Grill the chicken breast and slice it. Toss it with mixed greens, tomatoes, cucumber, olive oil, and balsamic vinegar.</p>
+                <p><strong>Health Tip:</strong> This recipe is low in carbs and packed with protein, making it perfect for managing blood sugar levels.</p>
             </div>
         </div>
 
-        <!-- Recipe 2 -->
+        <h2 id="heart-health">Heart-Healthy Recipes</h2>
+
+        <!-- Recipe 2: Heart-Healthy -->
         <div class="recipe-card" id="recipe2">
-            <h2>Pasta Primavera</h2>
+            <h2>Oatmeal with Berries and Almonds</h2>
             <button onclick="toggleDetails('details2')">Show Recipe</button>
             <div class="recipe-details" id="details2">
                 <h3>Ingredients:</h3>
                 <ul>
-                    <li>1 package of pasta</li>
-                    <li>1 cup mixed vegetables (peppers, broccoli, etc.)</li>
-                    <li>1/4 cup olive oil</li>
-                    <li>1 clove garlic</li>
-                    <li>Salt and pepper to taste</li>
+                    <li>1/2 cup rolled oats</li>
+                    <li>1 cup almond milk (unsweetened)</li>
+                    <li>1/2 cup mixed berries (blueberries, strawberries)</li>
+                    <li>2 tbsp sliced almonds</li>
                 </ul>
 
                 <h3>Instructions:</h3>
-                <p>Cook pasta, sauté vegetables with garlic and olive oil, and combine with pasta. Season with salt and pepper.</p>
+                <p>Cook oats with almond milk. Top with mixed berries and sliced almonds.</p>
+                <p><strong>Health Tip:</strong> This oatmeal is high in fiber and antioxidants, which are great for heart health.</p>
             </div>
         </div>
 
-        <!-- Recipe 3 -->
+        <h2 id="gluten-free">Gluten-Free Recipes</h2>
+
+        <!-- Recipe 3: Gluten-Free -->
         <div class="recipe-card" id="recipe3">
-            <h2>Apple Pie</h2>
+            <h2>Quinoa and Roasted Vegetable Bowl</h2>
             <button onclick="toggleDetails('details3')">Show Recipe</button>
             <div class="recipe-details" id="details3">
                 <h3>Ingredients:</h3>
                 <ul>
-                    <li>4 cups apples (sliced)</li>
-                    <li>1 cup sugar</li>
-                    <li>1 tsp cinnamon</li>
-                    <li>1/4 tsp nutmeg</li>
-                    <li>1 package pie crust</li>
+                    <li>1 cup quinoa</li>
+                    <li>1 cup mixed vegetables (zucchini, bell peppers, carrots)</li>
+                    <li>1 tbsp olive oil</li>
+                    <li>1/2 tsp turmeric</li>
                 </ul>
 
                 <h3>Instructions:</h3>
-                <p>Place apples in the pie crust, mix sugar, cinnamon, and nutmeg, and bake at 375°F for 45 minutes.</p>
+                <p>Cook quinoa according to package instructions. Roast vegetables with olive oil and turmeric. Combine cooked quinoa and roasted vegetables.</p>
+                <p><strong>Health Tip:</strong> Quinoa is a great gluten-free grain that is rich in protein and fiber, making it a perfect base for a healthy meal.</p>
             </div>
         </div>
-    </section>
+
+    </div>
 
     <footer>
-        <p>&copy; 2024 My Recipe Collection</p>
+        <p>&copy; 2024 Healthy Recipes for Special Dietary Needs</p>
     </footer>
 
     <!-- JavaScript for functionality -->
