@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask for a Recipe</title>
+</head>
+<body>
+    <h1>Ask for a Recipe</h1>
+    
+    <div id="pickaxe-embed">
+        <script>
+            window.PICKAXE = window.PICKAXE || {
+                pickaxes: [],
+                style: "kHsjoCQGgI0GWASmgIdIA2CHA0wGQyCwBQBUiEBzQQC+EgGQwgMA3gLICDMAoAnQgvFSCsUIPQYgIHqAEw4NXUgIz6DFQ4OkwghP2AGnoMFJgKAFA8gEA4QAI9gVPBABGqBU3gAggTEBAUQ6ApYkAAgIFMxwLcKgRvlAhyyAIG8DFAoAF1QOTugMODACreB2osAqaIAYhAOaAh6ECCr4BCSwACigJ2BAyEaA0TCAqqOAQquAQ2WAoAKAAISAz6CAB0MAT4DRhIABEYBgkoCicoACEoDm4IAgkoCzc4C2s4DUVIABY4CDQ4AV1YCgFoDWhoAzloB3IoCAl4BTYYA3pIBTo4CykoBYh4BWsYBY84BKooB0d4DlGYD59IBCF4C1+oDRB4AY2oC0F4AEG4CEiIBA2YBAxIAUoYAMt4BOIIDECIAFS4ACJIALYICXQIAXh4AMX4Ab+IBgR4AeAYAmBYCpWIDhQAAZABTADIFgABgQCyQIABZEAAAyACZRAMpdgFRAABAgAPXwCZgIBuocAdEiAKLDACEogESiQAqEoBqL0Ax4iAJBHACWRgADmwDpsIAAm0Ak8WAB4zAGIjgBzQwDjIYBOI0APSGAGkZAAhpAGbACBKgAYDQCBxIBKLMARaKAG1JAH45gCUyQBpwIAoZ8A1N2ATLpAMXQgGECQDzAoAQ9UABEuAKHvAIKZgAwTAAQgEBdQCADIBviMAc76AGWnAFvQgGCgwAXBIB9CUA9fqAETBAKZNgAU/QB27IA66MAsRiAGW9AAwkgGBUQAMi4BmQEAAGaAABxAECIgFljwA5jIAehUAlFyACZXAAwEgAJswCHGoAeCUAps+ANlbAJTfgFYSQAMXoBGF0AmYyADkVAEIygHg2QCCQIAq1UAyBWAJ7tAOJIgAHhQBBIIA6QkAFgOAbCZADnwgEZiwDQv0RADsZgGXAwDzmYAcIUALdeAAqDAAA1gCprQBZpIBQ/cAI1+AZ7nAI6pgDGiQBbqIALBUAQArAG/cQBfqkAM2PAA75wAvikAKQJAAm6wAahkAMGLAGXBwBRG0AAAQgA"
+            };
+            window.PICKAXE.pickaxes.push({ id: "Ask_recipe_0D184", type: "inline" });
+            const { id: _fid } = window.PICKAXE.pickaxes[0];
+            fetch(`https://embed.pickaxeproject.com/axe/api/script/${_fid}`)
+                .then(e => e.json())
+                .then(({ v: e }) => {
+                    const t = `https://cdn.jsdelivr.net/gh/pickaxeproject/cdn@${e}/dist`;
+                    if (!document.querySelector(`script[src="${t}/bundle.js"]`)) {
+                        const scriptElem = document.createElement("script");
+                        scriptElem.src = t + "/bundle.js";
+                        scriptElem.defer = true;
+                        document.head.appendChild(scriptElem);
+                    }
+                });
+        </script>
+        <div id="pickaxe-inline-Ask_recipe_0D184"></div>
+    </div>
+</body>
+</html>
