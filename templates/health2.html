@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Health Information Form</title>
+    
+    <!-- Embedded CSS for styling -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #008080;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        #health-form-section {
+            max-width: 700px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-size: 1rem;
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        button {
+            background-color: #008080;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 15px;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #006666;
+        }
+
+        #submission-status {
+            margin-top: 15px;
+            color: #008080;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Complete Health Information Form</h1>
+        <p>Provide detailed health and lifestyle information to understand your well-being better.</p>
+    </header>
+
+    <main>
+        <section id="health-form-section">
+            <h2>Health & Lifestyle Details</h2>
+            <form id="healthForm" method="POST" action="/api/user-health">
+
+                <!-- Personal Information -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+                
+                <label for="age">Age:</label>
+                <input type="number" id="age" placeholder="Enter your age" required>
+
+                <label for="gender">Gender:</label>
+                <select id="gender">
+                    <option value="">Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="blood-type">Blood Type:</label>
+                <select id="blood-type">
+                    <option value="">Select</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+
+                <label for="height">Height (in cm):</label>
+                <input type="number" id="height" placeholder="Enter your height" required>
+
+                <label for="weight">Weight (in kg):</label>
+                <input type="number" id="weight" placeholder="Enter your weight" required>
+
+                <!-- Health Condition Information -->
+                <label for="conditions">Known Health Conditions:</label>
+                <textarea id="conditions" placeholder="e.g., Diabetes, Hypertension, etc." rows="3"></textarea>
+
+                <label for="allergies">Allergies:</label>
+                <textarea id="allergies" placeholder="e.g., Peanuts, Penicillin, etc." rows="3"></textarea>
+
+                <label for="medications">Current Medications:</label>
+                <textarea id="medications" placeholder="e.g., Blood pressure meds, Insulin, etc." rows="3"></textarea>
+
+                <!-- Lifestyle Information -->
+                <label for="exercise">Exercise Frequency:</label>
+                <select id="exercise">
+                    <option value="">Select</option>
+                    <option value="none">None</option>
+                    <option value="rarely">Rarely</option>
+                    <option value="occasionally">Occasionally</option>
+                    <option value="frequently">Frequently</option>
+                    <option value="daily">Daily</option>
+                </select>
+
+                <label for="diet">Dietary Preference:</label>
+                <select id="diet">
+                    <option value="">Select</option>
+                    <option value="vegetarian">Vegetarian</option>
+                    <option value="non-vegetarian">Non-Vegetarian</option>
+                    <option value="vegan">Vegan</option>
+                    <option value="pescatarian">Pescatarian</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="smoking">Smoking Habits:</label>
+                <select id="smoking">
+                    <option value="">Select</option>
+                    <option value="never">Never</option>
+                    <option value="occasionally">Occasionally</option>
+                    <option value="regularly">Regularly</option>
+                    <option value="quit">Quit</option>
+                </select>
+
+                <label for="alcohol">Alcohol Consumption:</label>
+                <select id="alcohol">
+                    <option value="">Select</option>
+                    <option value="never">Never</option>
+                    <option value="occasionally">Occasionally</option>
+                    <option value="regularly">Regularly</option>
+                    <option value="quit">Quit</option>
+                </select>
+
+                <label for="sleep">Average Sleep (hours per night):</label>
+                <input type="number" id="sleep" placeholder="Enter average hours of sleep" required>
+
+                <label for="stress">Stress Level:</label>
+                <select id="stress">
+                    <option value="">Select</option>
+                    <option value="low">Low</option>
+                    <option value="moderate">Moderate</option>
+                    <option value="high">High</option>
+                    <option value="very-high">Very High</option>
+                </select>
+
+                <label for="mental-health">Mental Health Concerns:</label>
+                <textarea id="mental-health" placeholder="e.g., Anxiety, Depression, etc." rows="3"></textarea>
+
+                <label for="hydration">Daily Water Intake (in liters):</label>
+                <input type="number" id="hydration" placeholder="Enter your daily water intake" step="0.1" required>
+
+                <label for="family-history">Family Health History:</label>
+                <textarea id="family-history" placeholder="e.g., Heart disease, Cancer, etc." rows="3"></textarea>
+
+                <!-- Additional Lifestyle Habits -->
+                <label for="screen-time">Average Screen Time (hours per day):</label>
+                <input type="number" id="screen-time" placeholder="Enter average daily screen time" required>
+
+                <label for="caffeine-intake">Daily Caffeine Intake:</label>
+                <select id="caffeine-intake">
+                    <option value="">Select</option>
+                    <option value="none">None</option>
+                    <option value="1-2 cups">1-2 cups</option>
+                    <option value="3-4 cups">3-4 cups</option>
+                    <option value="5+ cups">5+ cups</option>
+                </select>
+
+                <label for="sun-exposure">Daily Sun Exposure (hours):</label>
+                <input type="number" id="sun-exposure" placeholder="Enter average daily sun exposure" step="0.5" required>
+
+                <label for="step-count">Average Daily Steps:</label>
+                <input type="number" id="step-count" placeholder="Enter your average daily steps" required>
+
+                <!-- Submit Button -->
+                <button type="submit">Submit Health Info</button>
+            </form>
+            <p id="submission-status"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 NutroWeb | Designed For A Healthier You</p>
+    </footer>
+    <script>
+        document.getElementById('healthForm').addEventListener('submit', async function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+            
+            // Display a loading message while the form is being submitted
+            document.getElementById('submission-status').textContent = "Submitting... Please wait.";
+            
+            // Collect form data
+            const formData = {
+                name: document.getElementById('name').value,
+                age: parseInt(document.getElementById('age').value),
+                gender: document.getElementById('gender').value,
+                bloodType: document.getElementById('blood-type').value,
+                height: parseFloat(document.getElementById('height').value),
+                weight: parseFloat(document.getElementById('weight').value),
+                knownHealthConditions: document.getElementById('conditions').value.split(", ").map(condition => condition.trim()),
+                allergies: document.getElementById('allergies').value.split(", ").map(allergy => allergy.trim()),
+                currentMedication: document.getElementById('medications').value.split(", ").map(med => med.trim()),
+                exerciseFrequency: document.getElementById('exercise').value,
+                dietaryPreferences: document.getElementById('diet').value,
+                smokingHabits: document.getElementById('smoking').value,
+                alcoholConsumption: document.getElementById('alcohol').value,
+                averageSleepHours: parseFloat(document.getElementById('sleep').value),
+                stressLevel: document.getElementById('stress').value,
+                mentalHealthConcerns: document.getElementById('mental-health').value.split(", ").map(concern => concern.trim()),
+                dailyWaterIntake: parseFloat(document.getElementById('hydration').value),
+                familyHealthHistory: document.getElementById('family-history').value.split(", ").map(history => history.trim()),
+                averageScreenTime: parseFloat(document.getElementById('screen-time').value),
+                dailyCaffeineIntake: document.getElementById('caffeine-intake').value,
+                dailySunExposure: parseFloat(document.getElementById('sun-exposure').value),
+                averageDailySteps: parseInt(document.getElementById('step-count').value)
+            };
+            console.log(formData);
+            try {
+                // Send the data to the backend
+                const response = await fetch("http://127.0.0.1:8000/api/user-health", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(formData)
+                });
+    
+                if (response.ok) {
+                    // Clear the loading message and display a success message
+                    document.getElementById('submission-status').textContent = "Health information submitted successfully!";
+                    
+                    // Reset the form after successful submission
+                    document.getElementById('healthForm').reset();
+                } else {
+                    // Display error details from the server response
+                    const errorData = await response.json();
+                    document.getElementById('submission-status').textContent = "Error: " + (errorData.detail || "Failed to submit data.");
+                }
+            } catch (error) {
+                // Handle errors that may occur during the fetch operation
+                console.error("Error:", error);
+                document.getElementById('submission-status').textContent = "Error: Failed to connect to the server.";
+            }
+        });
+    </script>
+    
+    
+    
+
+    <!-- Embedded JavaScript for form handling -->
+    <!--<script>
+
+        document.getElementById('healthForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Collect form data
+            const formData = {
+                name: document.getElementById('name').value,
+                age: document.getElementById('age').value,
+                gender: document.getElementById('gender').value,
+                bloodType: document.getElementById('blood-type').value,
+                height: document.getElementById('height').value,
+                weight: document.getElementById('weight').value,
+                conditions: document.getElementById('conditions').value,
+                allergies: document.getElementById('allergies').value,
+                medications: document.getElementById('medications').value,
+                exercise: document.getElementById('exercise').value,
+                diet: document.getElementById('diet').value,
+                smoking: document.getElementById('smoking').value,
+                alcohol: document.getElementById('alcohol').value,
+                sleep: document.getElementById('sleep').value,
+                stress: document.getElementById('stress').value,
+                mentalHealth: document.getElementById('mental-health').value,
+                hydration: document.getElementById('hydration').value,
+                familyHistory: document.getElementById('family-history').value,
+                screenTime: document.getElementById('screen-time').value,
+                caffeineIntake: document.getElementById('caffeine-intake').value,
+                sunExposure: document.getElementById('sun-exposure').value,
+                stepCount: document.getElementById('step-count').value
+            };
+            
+
+            console.log('Collected Data:', formData); // For testing purposes
+            document.getElementById('submission-status').textContent = "Health information submitted successfully!";
+            //document.getElementById('healthForm').reset(); // Reset the form after submission
+        });
+    </script>-->
+</body>
+</html>
