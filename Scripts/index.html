@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutroWeb</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include Choices.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- NutroWeb logo as text -->
+        <h1 id="logo">NutroWeb</h1>
+
+        <form id="health-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" placeholder="Enter your age" min="1" max="120" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">--Select--</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="disease">Health Conditions:</label>
+            <select id="disease" name="disease" multiple placeholder="Search and select diseases" required>
+                <option value="diabetes">Diabetes</option>
+                <option value="hypertension">Hypertension</option>
+                <option value="obesity">Obesity</option>
+                <option value="anemia">Anemia</option>
+                <option value="cholesterol">High Cholesterol</option>
+                <option value="arthritis">Arthritis</option>
+                <option value="celiac">Celiac Disease</option>
+                <option value="depression">Depression</option>
+                <option value="pcos">PCOS/PCOD</option>
+                <option value="thyroid">Thyroid Disorders</option>
+                <option value="acid_reflux">Acid Reflux</option>
+                <option value="osteoporosis">Osteoporosis</option>
+                <option value="gout">Gout</option>
+                <option value="liver_disease">Liver Disease</option>
+                <option value="kidney_disease">Kidney Disease</option>
+                <option value="migraine">Migraine</option> 
+                <option value="cancer">Cancer</option>
+                <option value="ibs">Irritable Bowel Syndrome (IBS)</option>
+                <option value="anxiety">Anxiety</option>
+                <option value="insomnia">Insomnia</option>
+            </select>
+
+            <label for="calories">Daily Calorie Requirement:</label>
+            <input type="number" id="calories" name="calories" placeholder="Enter your daily calorie goal" min="1000"
+                max="5000" step="50" required>
+
+            <label for="alcohol">Do you consume alcohol?</label>
+            <select id="alcohol" name="alcohol" required>
+                <option value="">--Select--</option>
+                <option value="no">No</option>
+                <option value="occasionally">Occasionally</option>
+                <option value="regularly">Regularly</option>
+            </select>
+
+            <label for="exercise">Exercise Frequency:</label>
+            <select id="exercise" name="exercise" required>
+                <option value="">--Select--</option>
+                <option value="none">No Exercise</option>
+                <option value="light">Light (1-2 times per week)</option>
+                <option value="moderate">Moderate (3-4 times per week)</option>
+                <option value="intense">Intense (5+ times per week)</option>
+            </select>
+
+            <!-- Additional fields -->
+            <label for="sun_exposure">Sun Exposure (in minutes per day):</label>
+            <input type="number" id="sun_exposure" name="sun_exposure" placeholder="Enter sun exposure time" min="0"
+                max="480">
+
+            <label for="step_count">Step Count (per day):</label>
+            <input type="number" id="step_count" name="step_count" placeholder="Enter step count" min="0" step="500">
+
+            <label for="caffeine_intake">Caffeine Intake (in cups per day):</label>
+            <input type="number" id="caffeine_intake" name="caffeine_intake" placeholder="Enter caffeine intake" min="0"
+                step="1">
+
+            <label for="screen_time">Screen Time (in hours per day):</label>
+            <input type="number" id="screen_time" name="screen_time" placeholder="Enter screen time" min="0" max="24"
+                step="0.5">
+
+            <label for="hydration">Water Intake (in liters per day):</label>
+            <input type="number" id="hydration" name="hydration" placeholder="Enter water intake" min="0" step="0.1">
+
+            <label for="mental_health">Mental Health Status:</label>
+            <select id="mental_health" name="mental_health" required>
+                <option value="">--Select--</option>
+                <option value="good">Good</option>
+                <option value="average">Average</option>
+                <option value="poor">Poor</option>
+            </select>
+            <label for="diet_preference">Dietary Preference:</label>
+            <select id="diet_preference" name="diet_preference" required>
+                <option value="">--Select--</option>
+                <option value="veg">Veg</option>
+                <option value="non_veg">Non-Veg</option>
+                <option value="both">Both</option>
+            </select>
+
+
+
+
+            </select>
+            <label for="weight">Weight (in kg):</label>
+            <input type="number" id="weight" name="weight" placeholder="Enter your weight" min="1" step="0.1" required>
+
+            <label for="height">Height (in cm):</label>
+            <input type="number" id="height" name="height" placeholder="Enter your height" min="50" max="250" required>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="recipe-result"></div>
+    </div>
+
+    <!-- Include Choices.js -->
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

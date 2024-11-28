@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #181818;
+    background-image: url('https://ideogram.ai/assets/image/lossless/response/XvY-1nSER9CX01lJ8x0yqw');
+    background-size: cover; /* Ensures the image covers the entire body */
+    background-position: center; /* Centers the background image */
+    background-attachment: fixed; /* Keeps the background fixed when scrolling */
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 10px;
+    /* background: ; */
+    border-radius: 10px;
+    /* box-shadow: 0 4px 9px rgb(228, 225, 225,1)  */
+}
+
+
+h1 {
+    text-align: center;
+    color: #d3c181;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+input, select, button {
+    width: 99%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 9px rgb(0, 0, 0);
+
+}
+
+button {
+    background-color: #d3c181;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #000;
+}
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+}
+
+

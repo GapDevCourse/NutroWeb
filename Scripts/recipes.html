@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommended Recipes</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General body styles */
+ /* General body styles */
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1,
+h2,
+h3 {
+    color: #d3c181;
+}
+
+/* Recipe result section */
+#recipe-result {
+    margin-top: 30px;
+}
+
+/* Animation for recipe container */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styling each recipe container */
+.recipe-container {
+    background-color: #333;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 9px rgba(253, 252, 252, 0.5);
+    animation: fadeInUp 0.5s ease-out forwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect to enlarge the recipe container */
+.recipe-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.8);
+}
+
+/* Styling for individual recipe name */
+.recipe-container h3 {
+    color: #d3c181;
+}
+
+.recipe-container p {
+    margin: 5px 0;
+}
+
+/* Button to go back to the form */
+.back-button {
+    text-align: center;
+    margin-top: 30px;
+}
+
+button {
+    background-color: #d3c181;
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #000;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Recommended Recipes</h1>
+        <hr></hr>
+
+        <div id="recipe-result"></div>
+
+        <!-- "Back to Form" button -->
+        <div class="back-button">
+            <button onclick="window.location.href = 'index.html'">Back to Form</button>
+        </div>
+    </div>
+
+    <script>
+        // Get the recipe data from localStorage
+        const recipeData = JSON.parse(localStorage.getItem('recipeData'));
+
+        // Check if recipe data exists
+        if (recipeData && recipeData.length > 0) {
+            const recipeResult = document.getElementById('recipe-result');
+            recipeResult.innerHTML = `
+                <h2>Here are some recipes based on your health conditions and calorie requirement:</h2>
+                ${recipeData.map(recipe => `
+    <div class="recipe-container">
+        <h3>${recipe.name}</h3>
+        <p><strong>Ingredients:</strong> ${recipe.ingredients.join(', ')}</p>
+        <p><strong>Calories:</strong> ${recipe.calories}</p>
+        <p><strong>Procedure:</strong></p>
+        <p>${recipe.procedure.join('<br>')}</p>
+        <p><strong>Diet Preference:</strong> ${recipe.diet_preference}</p>
+    </div>
+`).join('')}
+
+            `;
+        } else {
+            const recipeResult = document.getElementById('recipe-result');
+            recipeResult.innerHTML = `<p>No recipes found for your health conditions and calorie requirement.</p>`;
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+{
+    "name": "HealthRecipeApp",
+    "version": "1.0.0",
+    "description": "Health Recipe Application",
+    "main": "server.js",
+    "dependencies": {
+        "express": "^4.21.1",
+        "mongoose": "^5.10.9"
+    },
+    "scripts": {
+        "start": "node server.js"
+    },
+    "author": "Your Name",
+    "license": "ISC"
+}
