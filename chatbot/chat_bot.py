@@ -12,7 +12,7 @@ def send():
     if user_input.lower() == "hi":
         chatarea.insert(END, "\nBOT: Hello! How can I assist you with your diet and health today?")
     elif user_input.lower() == "what is your name":
-        chatarea.insert(END, "\nBOT: My name is Chandu, your friendly Nutroweb assistant.")
+        chatarea.insert(END, "\nBOT: My name is nutroweb, your friendly Nutroweb assistant.")
     elif user_input.lower() == "how are you":
         chatarea.insert(END, "\nBOT: I'm just a program, but I'm here to help you with your health journey!")
     elif user_input.lower() == "i am fine":
